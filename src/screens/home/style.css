@@ -1,0 +1,37 @@
+.container {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+body a, body h1, body b   {
+  color: rgb(94, 91, 91);
+  font-size: 1.3vw;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+body button {
+  color: rgba(93, 97, 93, 0.452);
+}
+
+body button:focus {
+  outline: none;   
+
+}
+body a:hover, body button:hover{
+  color: rgba(37, 37, 37, 0.747);
+}
+
+input:focus{
+  outline: none;   
+}
+
+@media screen and (max-width: 1024px) { 
+  body a, body h1, body b {
+    white-space: nowrap;
+    font-size: 1.5vw;
+  }
+}
+

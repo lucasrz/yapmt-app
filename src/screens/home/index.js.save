@@ -1,0 +1,133 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getProjectsSaga, createProjectSaga } from '../../actions';
+import './style.css';
+
+class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      tasks: [],
+      task: '',
+      validTask: true,
+      validName: true
+    }
+
+    this.updateInput = this.updateInput.bind(this);
+    this.addTask = this.addTask.bind(this);
+    this.handleProjectSubmit = this.handleProjectSubmit.bind(this);
+  }
+
+  updateInput(event) {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
+  }
+
+  addTask() {
+    const taskRegex = new RegExp('[a-zA-Z0-9]+, @[a-zA-Z0-9]+, ?([0-9][0-9]\/[0-9][0-9])', 'mig');
+    if (!taskRegex.test(this.state.task)) {
+
+q      return this.setState({ validTask: false });
+    }
+
+    this.setState(prevState => ({
+      tasks: [...prevState.tasks, this.state.task],
+      task: '',
+      validTask: true
+    }));
+
+    this.refs.taskInput.value = '';
+  }
+
+  handleProjectSubmit(e) {
+    if (e.key !== 'Enter') {
+      return;
+    }
+
+    if(!this.state.name) {
+      return this.setState({ validName: false });
+    }
+
+    this.props.createProject(this.state);
+    this.refs.nameInput.value = '';
+    this.setState({ tasks: [], name: '', validName: true });
+    this.props.dispatch(getProjectsSaga);
+  }
+
+  componentDidMount() {
+    this.props.getProjects();
+  }
+
+  render() {
+    const isValidTask = this.state.validTask;
+    const isValidName = this.state.validName;
+    return (
+      <div className="container">
+        <div className="project-screen" >
+          <div className="screen-header">
+            <input className="project-name-input" type="text" placeholder="New Project" name="name" ref="nameInput" onChange={this.updateInput} onKeyDown={this.handleProjectSubmit}></input>
+            {!isValidName && <p > Invalid task please follow the placeholder example! </p>}
+          </div>
+          <div className="task-list">
+            {
+              this.state.tasks && this.state.tasks.length > 0 && (
+                <div>
+                  {this.state.tasks.map((task, i) => (
+                    <div key={i} className="task-item">
+                      <input className="task-check" type="checkbox"></input>
+                      <b className="task-item-txt">{task} </b>
+                    </div>
+                  ))}
+                </div>
+              )
+            }
+            <input type="text" className="task-input" name="task" placeholder="Enter a new task, @owner, M/d" ref="taskInput" onChange={this.updateInput}></input>
+            {!isValidTask && <p > Invalid task please follow the placeholder example! </p>}
+            <div className="new-task-btn">
+              <a className="new-btn-txt" onClick={this.addTask}>+ Add Task</a>
+            </div>
+          </div>
+        </div>
+        <div className="sidebar">
+          <div className="project-list">
+            <h1 className="sidebar-title">Projects</h1>
+            {
+              this.props.projects && this.props.projects.length > 0 && (
+                <div>
+                  {this.props.projects.map(({
+                    name,
+                  }, i) => (
+                      <div key={i} className="project-btn">
+                        <a>{name}</a>
+                      </div>
+                    ))}
+                </div>
+              )
+            }
+            <div className="new-project-btn">
+              <a className="new-btn-txt">+ Add New Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  projects: state.projectsReducer.projects,
+  project: state.projectsReducer.project,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  getProjects: () => dispatch(getProjectsSaga()),
+  createProject: (state) => dispatch(createProjectSaga(state))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
