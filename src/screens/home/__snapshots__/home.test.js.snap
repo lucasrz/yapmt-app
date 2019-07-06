@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Home Component 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="project-screen"
+  >
+    <div
+      className="screen-header"
+    >
+      <input
+        className="project-name-input"
+        name="name"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="New Project"
+        type="text"
+      />
+    </div>
+    <div>
+      <input
+        className="task-input"
+        name="task"
+        onChange={[Function]}
+        placeholder="Enter a new task, @owner, M/d"
+        type="text"
+      />
+      <div
+        className="new-task-btn"
+      >
+        <button
+          className="new-btn-txt"
+          onClick={[Function]}
+        >
+          + Add Task
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sidebar"
+  >
+    <div
+      className="project-list"
+    >
+      <h1
+        className="sidebar-title"
+      >
+        Projects
+      </h1>
+      <div
+        className="new-project-btn-container"
+      >
+        <button
+          className="new-project-btn"
+          onClick={[Function]}
+        >
+          + Add New Project
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
