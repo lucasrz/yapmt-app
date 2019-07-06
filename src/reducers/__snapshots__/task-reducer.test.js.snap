@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reducers Set Task 1`] = `
+Object {
+  "projectsReducer": Object {
+    "projects": Array [],
+  },
+  "tasksReducer": Object {
+    "task": Object {
+      "task": Object {
+        "_id": "5d1fff233bbd50c6e5547c3f",
+        "description": "aaa",
+        "dueDate": "11/11",
+        "isDone": true,
+        "owner": "@aaaa",
+      },
+      "type": "SET_TASK",
+    },
+  },
+}
+`;

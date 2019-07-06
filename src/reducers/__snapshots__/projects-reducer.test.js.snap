@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reducers Create Project 1`] = `Object {}`;
+
+exports[`Reducers Request Success 1`] = `Object {}`;
+
+exports[`Reducers Set Project 1`] = `
+Object {
+  "projectsReducer": Object {
+    "project": Object {
+      "project": Object {
+        "name": "testing",
+        "tasks": Array [
+          Object {},
+        ],
+      },
+      "type": "SET_PROJECT",
+    },
+    "projects": Array [],
+  },
+  "tasksReducer": Object {
+    "task": Object {},
+  },
+}
+`;
+
+exports[`Reducers Set Projects 1`] = `
+Object {
+  "projectsReducer": Object {
+    "projects": Array [
+      Object {
+        "name": "testing",
+        "tasks": Array [
+          Object {},
+        ],
+      },
+      Object {
+        "name": "testing",
+        "tasks": Array [
+          Object {},
+        ],
+      },
+      Object {
+        "name": "testing",
+        "tasks": Array [
+          Object {},
+        ],
+      },
+    ],
+  },
+  "tasksReducer": Object {
+    "task": Object {},
+  },
+}
+`;
