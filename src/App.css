@@ -19,8 +19,18 @@
   color: white;
 }
 
+.validation-error {
+  color: #db5858;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 @keyframes App-logo-spin {
