@@ -1,0 +1,140 @@
+.completed-task {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.late-task {
+  color: #e58181;
+}
+
+.task-input {
+  width: 100%;
+  height: 2vw;
+  border: none;
+  margin-top: 1rem;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  box-shadow: 0 0 0px 1000px white inset;
+}
+.task-list {
+  width: 100%;
+  height: 80%;
+}
+
+.task-item {
+  width: 100%; 
+  height: 1rem;
+  margin-bottom: 2vw;
+}
+
+.task-item-txt {
+  margin-left: 0.5vw;
+}
+
+.new-task-btn{
+  height: 5vh;
+  margin-left: 1.5vw;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 2rem;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: 2rem;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-size: 2rem;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1024px) { 
+  .task-item {
+    text-align: center;
+    height: 1rem;
+    margin-bottom: 2vw;
+    margin-top: 3vw;
+  }
+
+  .task-item-txt {
+    margin-left: 0.5vw;
+    font-size: 2.5vw;
+  }
+
+  .task-list-container{
+    text-align: center;
+  }
+
+  .task-list {
+    text-align: center;
+  }
+
+
+  .task-input{
+    height: 5vw;
+  }
+
+  .new-task-btn{
+    height: 5vh;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 770px) { 
+  .task-check {
+    zoom: .6;
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 4vw;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-size: 4vw;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-size: 4vw;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: 4vw;
+  }
+
+  .new-task-btn{
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) { 
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: .9rem;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-size: .9rem;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-size: .9rem;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: .9rem;
+  }
+}

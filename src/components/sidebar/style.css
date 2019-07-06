@@ -1,0 +1,122 @@
+.sidebar {
+  float: left;
+  height: 100%;
+  width: 15%;
+  padding: 0.1rem;
+  background-color: rgba(128, 127, 127, 0.103);
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-direction: column;
+  display: flex;
+}
+
+.project-list{
+  margin-top: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar-title {
+  font-size: 3vw;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+.project-btn {
+  width: 100%;
+  height: 25%;
+  border-top: 1px solid rgba(105, 105, 105, 0.247);
+  padding-right: 1vw;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.project-btn:hover {
+  box-shadow:  rgba(105, 105, 105, 0.247) 1px 1px;
+  background-color: rgba(255, 255, 255, 0.473);
+  border-bottom: none;
+}
+
+.arrow-icon {
+  margin-left: 1vw;
+}
+
+.project-btn:focus {
+  box-shadow:  rgba(105, 105, 105, 0.247) 1px 1px;
+  background-color: rgba(255, 255, 255, 0.473);
+  border-bottom: none;
+}
+
+.project-btn:visited {
+  background-color: white;
+}
+
+.new-project-btn-container{
+  width: 100%;
+  height: 7vh;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5vw !important;
+  margin-top: 2rem;
+  margin-top: 4rem;
+}
+
+.new-project-btn {
+  margin: auto 0;
+}
+
+@media screen and (max-width: 1024px) { 
+  .screen-header {
+    height: 8vw;
+    font-size: 5rem;
+  }
+
+  .header-title {
+    font-size: 4vw;
+    width: 50%;
+    margin-right: 0;
+  }
+
+  .project-btn a {
+    font-size: 2vw;
+    padding-right: 1vw;
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+  }
+
+  body a, body h1, body b {
+    color: rgb(44, 39, 39);
+    white-space: nowrap;
+    font-size: 1.5vw;
+  }
+
+  .sidebar {
+    width: 15%;
+  }
+
+  .sidebar-title {
+    margin-bottom: 1rem;
+  }
+
+  .new-project-btn{
+    height: 5vh;
+    margin-left: 0.5rem;
+  }
+
+  .task-list {
+    text-align: center;
+  }
+
+  .new-project-btn{
+    margin-left: 0;
+  }
+
+  .new-project-btn-container{
+    margin-top: 0rem;
+  }
+}
+
+

@@ -1,0 +1,114 @@
+.project-screen {
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 85%;
+  float: right;
+  overflow-y: auto;
+}
+
+.screen-header {
+  width: 100%;
+  height: 3vw;
+  border-bottom: 1px solid black;
+  margin-bottom: 2%;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.header-title {
+  font-size: 2vw;
+  width: 50%;
+  margin-right: 0;
+}
+
+.delete-project-btn {
+  position: absolute;
+  float: right;
+  top: .8vw;
+  right: 1vw;
+}
+
+.delete-project-txt {
+  color: #b7b9b7;
+  font-size: 2vw;
+}
+
+.project-status {
+  position: absolute;
+  top: 1.5vw;
+  right: 15vw;
+}
+
+@media screen and (max-width: 1024px) { 
+  .screen-header {
+    height: 8vw;
+    font-size: 5rem;
+  }
+
+  .header-title {
+    font-size: 4vw;
+    width: 50%;
+    margin-right: 0;
+  }
+
+  .header-status-txt {
+    font-size: 3vw;
+  }
+
+  .delete-project-txt {
+    font-size: 3vw;
+  }
+
+  .delete-project-btn {
+    top: 1.3vw;
+    right: 3.5vw;
+  }
+
+  .project-status {
+    right: 24vw;
+  }
+}
+
+@media screen and (max-width: 768px) { 
+  .header-status-txt {
+    font-size: 3vw;
+  }
+
+  .delete-project-txt {
+    font-size: 3vw;
+  }
+
+  .delete-project-btn {
+    top: 1.3vw;
+    right: 3.5vw;
+  }
+
+  .project-status {
+    right: 24vw;
+  }
+}
+
+@media screen and (max-width: 500px) { 
+  .screen-header {
+    height: 1vw;
+    font-size: 5rem;
+  }
+
+  .project-btn {
+    padding: 0;
+  }
+  
+  .delete-project-btn {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+  }
+  
+  .project-status {
+    position: absolute;
+    top: 0;
+    right: 25vw;
+  }
+}
