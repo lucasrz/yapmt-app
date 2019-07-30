@@ -1,6 +1,4 @@
-# YAMPT APP
-
-Project manager API for superplayer assessment
+# YT APP
 
 ## Installation
 
